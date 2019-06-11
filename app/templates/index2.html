@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        a {
+            color: green;
+            }
+    
+    </style>
+	
+</head>
+
+<body>
+<!--Link para página principal-->    
+<p><b><a href="http://localhost:5000/index" target="_blank">Voltar à página principal</a></b></p>   
+<!--Lista de funcionários(as)-->  
+{% for employee in employees %}
+    <br>
+	Id:{{employee['id']}}<br>
+    Name:{{ employee['name'] }}<br>
+    Email: {{ employee['email'] }}<br>
+    Department: {{employee['department']}}<br>
+<br>
+{% endfor %}
+
+</body>
+</html>
